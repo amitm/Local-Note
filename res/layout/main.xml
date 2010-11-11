@@ -32,6 +32,6 @@
 		     android:layout_height="fill_parent"
 		     android:layout_width="fill_parent"
 		     android:text="@string/new_note"
-		     android:onClick="selfDestruct" />
+		     android:onClick="newNote" />
 	</LinearLayout>
 </LinearLayout>
