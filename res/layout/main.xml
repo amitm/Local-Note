@@ -3,16 +3,16 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-		android:background="#FFFFFF"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp">
+		android:background="#FFFFFF">
 
     <ListView android:id="@id/android:list"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
+			  android:layout_height="fill_parent"
               android:background="#FFFFFF"
               android:layout_weight="1"
 			  android:cacheColorHint="#FFFFFF"
+			  android:layout_marginLeft="8dip"
+        	  android:layout_marginRight="8dip"
               android:drawSelectorOnTop="false"/>
 
     <TextView android:id="@id/android:empty"
@@ -20,4 +20,18 @@
               android:layout_height="fill_parent"
               android:background="#FFFFFF"
               android:text="No data"/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:paddingLeft="2dip"
+        android:paddingRight="2dip"
+        android:paddingTop="5dip"
+		android:background="#333333">
+		<Button
+		     android:layout_height="fill_parent"
+		     android:layout_width="fill_parent"
+		     android:text="@string/new_note"
+		     android:onClick="selfDestruct" />
+	</LinearLayout>
 </LinearLayout>
