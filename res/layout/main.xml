@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="#ffffff"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-    <ListView android:id="@android:id/list"
-            android:layout_width="fill_parent" 
-            android:layout_height="fill_parent"
-            android:layout_weight="1.0"
-            android:textColor="#444444"
-            android:dividerHeight="1px"
-            android:cacheColorHint="#00000000">
-    </ListView>
-</RelativeLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+		android:background="#FFFFFF"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+    <ListView android:id="@id/android:list"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#FFFFFF"
+              android:layout_weight="1"
+			  android:cacheColorHint="#FFFFFF"
+              android:drawSelectorOnTop="false"/>
+
+    <TextView android:id="@id/android:empty"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#FFFFFF"
+              android:text="No data"/>
+</LinearLayout>
