@@ -18,7 +18,7 @@
 		     android:layout_height="fill_parent"
 		     android:layout_width="fill_parent"
 		     android:text="@string/save_new_note"
-		     android:onClick="newNote" />
+		     android:onClick="saveNote" />
 	</LinearLayout>
 	<ScrollView
 	    android:layout_width="fill_parent"
