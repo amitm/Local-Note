@@ -14,8 +14,9 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class id {
-        public static final int note_text=0x7f050000;
-        public static final int text1=0x7f050001;
+        public static final int button_bar=0x7f050000;
+        public static final int note_text=0x7f050001;
+        public static final int text1=0x7f050002;
     }
     public static final class layout {
         public static final int create_note=0x7f030000;
@@ -29,5 +30,6 @@ public final class R {
         public static final int new_note=0x7f040005;
         public static final int row1=0x7f040003;
         public static final int row2=0x7f040004;
+        public static final int save_new_note=0x7f040006;
     }
 }
