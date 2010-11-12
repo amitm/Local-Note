@@ -15,8 +15,9 @@ public final class R {
     }
     public static final class id {
         public static final int button_bar=0x7f050000;
-        public static final int note_text=0x7f050001;
-        public static final int text1=0x7f050002;
+        public static final int create_note_button=0x7f050001;
+        public static final int note_text=0x7f050002;
+        public static final int text1=0x7f050003;
     }
     public static final class layout {
         public static final int create_note=0x7f030000;
