@@ -2,10 +2,14 @@ package net.digitalmasonry.localnote;
 
 import java.util.ArrayList;
 
+import android.content.Context;
+
 public class Note {
 	// Current data storage for notes
 	public static ArrayList<Note> notes;
-	public String content;
+	public CharSequence content;
+	private static NoteOpenHelper noteOpenHelper;
+	
 	
 	public static Note getNewestNote() {
 		if (notes.size() > 0) {
@@ -14,11 +18,21 @@ public class Note {
 		return null;
 	}
 	
-	public static void insert(Note note) {
+	public static void setContext(Context context) {
+		noteOpenHelper = new NoteOpenHelper(context);
+		notes = noteOpenHelper.getNotes();
+	}
+	
+	public static void save(Note note) {
 		notes.add(0, note);
+		noteOpenHelper.save(note);
 	}
 	
 	public static ArrayList<Note> getAlNotes() {
 		return notes;
+	}
+	
+	public Note(CharSequence content) {
+		this.content = content;
 	}
 }

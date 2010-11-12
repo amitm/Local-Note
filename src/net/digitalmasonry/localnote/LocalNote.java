@@ -17,9 +17,13 @@ public class LocalNote extends ListActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        Note.setContext(this);
         
         ArrayList<String> list = new ArrayList<String>();
-        list.add("hello");
+        ArrayList<Note> notes = Note.notes;
+        for (Note note : notes) {
+        	list.add(note.content.toString());
+        }
         adapter = new ArrayAdapter<String>(this, R.layout.note_list_item, R.id.text1, list); 
         setListAdapter(adapter);
     }
@@ -33,8 +37,8 @@ public class LocalNote extends ListActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     	if (requestCode == CREATE_NOTE_DATA) {
     		if (resultCode == RESULT_OK) {
-    			CharSequence sequence = data.getExtras().getCharSequence(Intent.EXTRA_TEXT);
-    			adapter.insert(sequence.toString(), 0);
+    			Note note = Note.getNewestNote();
+    			adapter.insert(note.content.toString(), 0);
     		}
     	}
     }

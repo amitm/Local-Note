@@ -15,11 +15,6 @@
         	  android:layout_marginRight="8dip"
               android:drawSelectorOnTop="false"/>
 
-    <TextView android:id="@id/android:empty"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:background="#FFFFFF"
-              android:text="No data"/>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="fill_parent"

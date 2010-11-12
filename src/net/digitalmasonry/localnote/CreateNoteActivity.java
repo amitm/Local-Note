@@ -14,6 +14,7 @@ public class CreateNoteActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_note);
+        Note.setContext(this);
         TextView noteTextView = (TextView)findViewById(R.id.note_text);
         
         noteTextView.addTextChangedListener(new TextWatcher() {
@@ -34,7 +35,8 @@ public class CreateNoteActivity extends Activity {
     public void saveNote(View view) {
     	Intent resultIntent = new Intent();
     	TextView noteTextView = (TextView)findViewById(R.id.note_text);
-    	resultIntent.putExtra(Intent.EXTRA_TEXT, noteTextView.getText());
+    	Note note = new Note(noteTextView.getText());
+    	Note.save(note);
     	setResult(Activity.RESULT_OK, resultIntent);
     	finish();
     }
