@@ -6,10 +6,8 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.view.View.OnKeyListener;
 import android.widget.Button;
 import android.widget.TextView;
-import android.view.KeyEvent;
 
 public class CreateNoteActivity extends Activity {
 	@Override
@@ -27,7 +25,6 @@ public class CreateNoteActivity extends Activity {
 				TextView noteTextView = (TextView)findViewById(R.id.note_text);
 				button.setEnabled(noteTextView.getText().length() > 0);
         	 }
-
         });
         
         Button button = (Button)findViewById(R.id.create_note_button);
