@@ -48,8 +48,8 @@ public class NoteOpenHelper extends SQLiteOpenHelper {
 
 	public void save(Note note) {
 		String content = note.content.toString();
-		String sql = "INSERT INTO " + NOTE_TABLE_NAME + " (content) VALUES (?)";
+		String sql = "INSERT INTO " + NOTE_TABLE_NAME + " (\"content\") VALUES (?)";
 		SQLiteDatabase db = getWritableDatabase();
-		db.rawQuery(sql, new String[] { content });
+		db.execSQL(sql, new String[] { content });
 	}
 }
