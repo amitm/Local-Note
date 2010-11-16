@@ -15,18 +15,26 @@
         	  android:layout_marginRight="8dip"
               android:drawSelectorOnTop="false"/>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="60dip"
         android:paddingLeft="2dip"
         android:paddingRight="2dip"
         android:paddingTop="5dip"
-		android:background="#333333">
-		<Button
-		     android:layout_height="fill_parent"
-		     android:layout_width="fill_parent"
-		     android:text="@string/new_note"
-		     android:onClick="newNote" />
-	</LinearLayout>
+		android:background="#333333"
+		android:stretchColumns="1">
+	    <TableRow>
+	    	<Button
+		     	android:layout_height="fill_parent"
+		     	android:layout_width="fill_parent"
+		     	android:text="@string/show_map"
+		     	android:onClick="showMap" />
+		     <Button
+		     	android:layout_height="fill_parent"
+		     	android:layout_width="fill_parent"
+		     	android:text="@string/new_note"
+			    android:onClick="newNote" />
+	    </TableRow>
+    </TableLayout>
 </LinearLayout>

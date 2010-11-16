@@ -52,7 +52,7 @@ public class NoteOpenHelper extends SQLiteOpenHelper {
 				if (content != null) {
 					Note note = new Note(content);
 					note.latitude = c.getDouble(latitudeColumn); 
-					note.latitude = c.getDouble(longitudeColumn);
+					note.longitude = c.getDouble(longitudeColumn);
 					notes.add(0, note);
 				}
 			} while (c.moveToNext());

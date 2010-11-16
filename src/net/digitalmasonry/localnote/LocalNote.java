@@ -33,6 +33,11 @@ public class LocalNote extends ListActivity {
     	startActivityForResult(intent, CREATE_NOTE_DATA);
     }
     
+    public void showMap(View view) {
+    	Intent intent = new Intent(this, net.digitalmasonry.localnote.MapNoteActivity.class);
+    	startActivity(intent);
+    }
+    
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     	if (requestCode == CREATE_NOTE_DATA) {
