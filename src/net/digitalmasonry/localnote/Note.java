@@ -3,7 +3,6 @@ package net.digitalmasonry.localnote;
 import java.util.ArrayList;
 
 import android.content.Context;
-import android.location.Location;
 
 public class Note {
 	// Current data storage for notes
